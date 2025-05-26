@@ -5,9 +5,9 @@ We introduced a novel multimodal emotion prediction method, CMCBEP-CL, which lev
 ## Requirements
 Our code is written by Python, based on Pytorch (Version ≥ 1.4)
 ## Datasets
-[CMU_MOSEI](https://aclanthology.org/P18-1208.pdf)/[CMU_MOSI](https://ieeexplore.ieee.org/document/7742221)
+[CMU_MOSEI](https://aclanthology.org/P18-1208.pdf)/[CMU_MOSI](https://ieeexplore.ieee.org/document/7742221)/[CH-SMIS](https://aclanthology.org/2020.acl-main.343/)
 
-The SIMSUF uses feature files that are organized as follows:
+The CMCBEP-CL uses feature files that are organized as follows:
 ``` 
 {
     "train": {
@@ -41,13 +41,18 @@ We use the same metric set that has been consistently presented and compared bef
   border-left:none;mso-border-left-alt:solid windowtext .5pt;mso-border-alt:
   solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
   <p class="MsoNormal" align="center" style="text-align:center"><span lang="EN-US">MOSI</span></p>
+  </td> 
+  <td width="277" colspan="5" valign="top" style="width:207.5pt;border:solid windowtext 1.0pt;
+  border-left:none;mso-border-left-alt:solid windowtext .5pt;mso-border-alt:
+  solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" align="center" style="text-align:center"><span lang="EN-US">CH-SMIS</span></p>
   </td>
  </tr>
  <tr style="mso-yfti-irow:1">
   <td width="55" valign="top" style="width:41.45pt;border:solid windowtext 1.0pt;
   border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
   padding:0cm 5.4pt 0cm 5.4pt">
-  <p class="MsoNormal" align="center" style="text-align:center"><span lang="EN-US">MSE</span></p>
+  <p class="MsoNormal" align="center" style="text-align:center"><span lang="EN-US">MAE</span></p>
   </td>
   <td width="55" valign="top" style="width:41.45pt;border-top:none;border-left:
   none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
@@ -77,7 +82,7 @@ We use the same metric set that has been consistently presented and compared bef
   border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
   mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
   mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
-  <p class="MsoNormal" align="center" style="text-align:center"><span lang="EN-US">MSE</span></p>
+  <p class="MsoNormal" align="center" style="text-align:center"><span lang="EN-US">MAE</span></p>
   </td>
   <td width="55" valign="top" style="width:41.5pt;border-top:none;border-left:none;
   border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
@@ -98,6 +103,36 @@ We use the same metric set that has been consistently presented and compared bef
   <p class="MsoNormal" align="center" style="text-align:center"><span lang="EN-US">ACC-2</span></p>
   </td>
   <td width="55" valign="top" style="width:41.5pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" align="center" style="text-align:center"><span lang="EN-US">F1</span></p>
+  </td>
+     <td width="55" valign="top" style="width:41.5pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" align="center" style="text-align:center"><span lang="EN-US">MAE</span></p>
+  </td>
+     <td width="55" valign="top" style="width:41.5pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" align="center" style="text-align:center"><span lang="EN-US">Corr</span></p>
+  </td>
+     <td width="55" valign="top" style="width:41.5pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" align="center" style="text-align:center"><span lang="EN-US">Acc-2</span></p>
+  </td>
+     <td width="55" valign="top" style="width:41.5pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" align="center" style="text-align:center"><span lang="EN-US">Acc-5</span></p>
+  </td>
+     <td width="55" valign="top" style="width:41.5pt;border-top:none;border-left:none;
   border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
   mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
   mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
@@ -114,102 +149,126 @@ We use the same metric set that has been consistently presented and compared bef
   none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
   mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
   mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
-  <p class="MsoNormal" align="center" style="text-align:center"><span lang="EN-US">0.772</span></p>
+  <p class="MsoNormal" align="center" style="text-align:center"><span lang="EN-US">0.768</span></p>
   </td>
   <td width="55" valign="top" style="width:41.45pt;border-top:none;border-left:
   none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
   mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
   mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
-  <p class="MsoNormal" align="center" style="text-align:center"><span lang="EN-US">53.68</span></p>
+  <p class="MsoNormal" align="center" style="text-align:center"><span lang="EN-US">54.20</span></p>
   </td>
   <td width="55" valign="top" style="width:41.45pt;border-top:none;border-left:
   none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
   mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
   mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
-  <p class="MsoNormal" align="center" style="text-align:center"><span lang="EN-US">86.23</span></p>
+  <p class="MsoNormal" align="center" style="text-align:center"><span lang="EN-US">86.28</span></p>
   </td>
   <td width="55" valign="top" style="width:41.5pt;border-top:none;border-left:none;
   border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
   mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
   mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
-  <p class="MsoNormal" align="center" style="text-align:center"><span lang="EN-US">86.12</span></p>
+  <p class="MsoNormal" align="center" style="text-align:center"><span lang="EN-US">86.19</span></p>
   </td>
   <td width="55" valign="top" style="width:41.5pt;border-top:none;border-left:none;
   border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
   mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
   mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
-  <p class="MsoNormal" align="center" style="text-align:center"><span lang="EN-US">0.709</span></p>
+  <p class="MsoNormal" align="center" style="text-align:center"><span lang="EN-US">0.710</span></p>
   </td>
   <td width="55" valign="top" style="width:41.5pt;border-top:none;border-left:none;
   border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
   mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
   mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
-  <p class="MsoNormal" align="center" style="text-align:center"><span lang="EN-US">0.802</span></p>
+  <p class="MsoNormal" align="center" style="text-align:center"><span lang="EN-US">0.803</span></p>
   </td>
   <td width="55" valign="top" style="width:41.5pt;border-top:none;border-left:none;
   border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
   mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
   mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
-  <p class="MsoNormal" align="center" style="text-align:center"><span lang="EN-US">45.72</span></p>
+  <p class="MsoNormal" align="center" style="text-align:center"><span lang="EN-US">46.56</span></p>
   </td>
   <td width="55" valign="top" style="width:41.5pt;border-top:none;border-left:none;
   border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
   mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
   mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
-  <p class="MsoNormal" align="center" style="text-align:center"><span lang="EN-US">86.08</span></p>
+  <p class="MsoNormal" align="center" style="text-align:center"><span lang="EN-US">86.13</span></p>
   </td>
   <td width="55" valign="top" style="width:41.5pt;border-top:none;border-left:none;
   border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
   mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
   mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
-  <p class="MsoNormal" align="center" style="text-align:center"><span lang="EN-US">85.98</span></p>
+  <p class="MsoNormal" align="center" style="text-align:center"><span lang="EN-US">86.01</span></p>
+  </td>
+     <td width="55" valign="top" style="width:41.5pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" align="center" style="text-align:center"><span lang="EN-US">0.380</span></p>
+  </td>
+     <td width="55" valign="top" style="width:41.5pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" align="center" style="text-align:center"><span lang="EN-US">0.686</span></p>
+  </td>
+     <td width="55" valign="top" style="width:41.5pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" align="center" style="text-align:center"><span lang="EN-US">83.68</span></p>
+  </td>
+     <td width="55" valign="top" style="width:41.5pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" align="center" style="text-align:center"><span lang="EN-US">46.26</span></p>
+  </td>
+     <td width="55" valign="top" style="width:41.5pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" align="center" style="text-align:center"><span lang="EN-US">84.98</span></p>
   </td>
  </tr>
 </tbody></table>
 
 ### Visualization results
 
-Here, we further visualize feature distributions of hidden representations in our SIMSUF model via the tSNE projections.
+Here, we further visualize the feature distribution in the CMCBEP-CL model by generating a heatmap.
 * Visualization Sample1
 
-The visualization of the outputs of main-line modal supplementary learning.
+Visualization of feature distribution in the first round of training.
 
-![Visualization1.pdf](https://github.com/HumanCenteredUndestanding/SIMSUF/blob/main/original.pdf)  
+![Visualization1.pdf](https://github.com/zbxshangqiu/CMCBEP-CL/Fig4a.png)  
 * Visualization Sample2
 
-The distribution of the features which are outputs of  main-line modal supplementary learning.
+Visualization of feature distribution in the 42nd round of training.
 
-![Visualization2.pdf](https://github.com/HumanCenteredUndestanding/SIMSUF/blob/main/sup.pdf)  
+![Visualization2.pdf](https://github.com/zbxshangqiu/CMCBEP-CL/Fig4b.png)  
 
 
 * Visualization Sample3
 
-The distribution of the features which are outputs of common modality enhancement operation.
+Visualization of feature distribution in the 83rd round of training.
 
-![Visualization3.pdf](https://github.com/HumanCenteredUndestanding/SIMSUF/blob/main/common.pdf)  
+![Visualization3.pdf](https://github.com/zbxshangqiu/CMCBEP-CL/Fig4c.png)  
 
 * Visualization Sample4
 
-The distribution of the features which are outputs of semantic difference enhancement.
+Overall framework diagram of the model
 
-![Visualization4.pdf](https://github.com/HumanCenteredUndestanding/SIMSUF/blob/main/fm2.pdf)  
+![Visualization4.pdf](https://github.com/zbxshangqiu/CMCBEP-CL/Fig2.png)  
 
 * Visualization Sample5
 
-The distribution of the features which are outputs of distribution difference enhancement.
+Balance prediction result module
 
-![Visualization5.pdf](https://github.com/HumanCenteredUndestanding/SIMSUF/blob/main/fm3.pdf) 
-
-* Visualization Sample6
-
-The distribution of the features which are outputs of specific-modality enhancement module.
-
-![Visualization6.pdf](https://github.com/HumanCenteredUndestanding/SIMSUF/blob/main/specific.pdf)
+![Visualization5.pdf](https://github.com/zbxshangqiu/CMCBEP-CL/Fig3.png) 
 
 ## Usage
 1.Clone the repository
 ``` 
-git clone https://github.com/HumanCenteredUndestanding/SIMSUF.git
+git clone https://github.com/zbxshangqiu/CMCBEP-CL.git
 ```
 2.Download dataset config and put the split dataset folders into $ROOT_DIR/datasets/. The folders are arranged like this:
 ```
@@ -221,7 +280,11 @@ git clone https://github.com/HumanCenteredUndestanding/SIMSUF.git
     
     ├── MOSI    
     │   ├── mosi_data_noalign.pkl    
-    │   ├── MOSI-label  
+    │   ├── MOSI-label
+
+    ├── CH-SIMS    
+    │   ├── ch-sims_data_noalign.pkl    
+    │   ├── CH-SIMS-label  
  ```
  3.Train the model
   ```
@@ -231,4 +294,4 @@ python main.py
   
 ## Conclusion  
   
-In this paper, we proposed a SIMSUF approach for multimodal sentiment analysis. In the approach, we contributed to multimodal sentiment analysis through multimodal supplementary, modality-specific and modality-common representation enhancement, and effective modal-guided multimodal fusion. Our approach was evaluated in two commonly used datasets. Expensive experiments and ablation studies demonstrated the effectiveness of our approach.
+This article proposes a cross modal complementary balanced multimodal sentiment analysis technique driven by contrastive learning. CMCBEP-CL consists of three main modules, namely the dominant mode supplement module, the balanced prediction result module, and the cross mode comparative analysis module. This model utilizes multimodal supplementation, enhancement, and fusion to enhance feature differences and correlations through cross modal contrastive learning, balancing the predictive results of each stage of multimodal sentiment analysis. Three well used datasets, CMU-MOSEI, CMU-MOSI, and CH-SIMS, were used to evaluate the proposed CMCBEP-CL. Many tests and ablation studies have demonstrated the effectiveness of this algorithm.
