@@ -1,7 +1,7 @@
 # CMCBEP-CL
 CMCBEP-CL is a framework for multimodal sentiment analysis task.
 ## Introdction
-We introduced a novel multimodal emotion prediction method, CMCBEP-CL, which leverages contrastive learning and cross-modal complementary balance to enhance sentiment analysis accuracy. The method comprises three core modules: a lead mode supplementation module, a cross-modal comparative analysis module, and a balanced prediction result module. The lead mode supplementation module identifies and utilizes the most representative modality to supplement feature representations of other modalities. The cross-modal comparative analysis module extracts specific and differential features through contrastive learning, improving discriminative semantic information extraction. Finally, the balanced prediction result module integrates prediction results from each stage to ensure robust sentiment analysis. Experimental results on the CMU-MOSEI, CMU-MOSI, and CH-SIMS datasets demonstrate that our proposed approach outperforms state-of-the-art methods.
+We introduced a novel multimodal emotion prediction method, CMCBEP-CL, which leverages contrastive learning and cross-modal complementary balance to enhance sentiment analysis accuracy. The method comprises three core modules: a lead mode supplementation module, a cross-modal comparative analysis module, and a balanced prediction result module. The lead mode supplementation module identifies and utilizes the most representative modality to supplement feature representations of other modalities. The cross-modal comparative analysis module extracts specific and differential features through contrastive learning, improving discriminative semantic information extraction. Finally, the balanced prediction result module integrates prediction results from each stage to ensure robust sentiment analysis. Experimental results on the CMU-MOSEI and CMU-MOSI datasets demonstrate that our proposed approach outperforms state-of-the-art methods.
 ## Requirements
 Our code is written by Python, based on Pytorch (Version ≥ 1.4)
 ## Datasets
@@ -42,11 +42,6 @@ We use the same metric set that has been consistently presented and compared bef
   solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
   <p class="MsoNormal" align="center" style="text-align:center"><span lang="EN-US">MOSI</span></p>
   </td> 
-  <td width="277" colspan="5" valign="top" style="width:207.5pt;border:solid windowtext 1.0pt;
-  border-left:none;mso-border-left-alt:solid windowtext .5pt;mso-border-alt:
-  solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
-  <p class="MsoNormal" align="center" style="text-align:center"><span lang="EN-US">CH-SMIS</span></p>
-  </td>
  </tr>
  <tr style="mso-yfti-irow:1">
   <td width="55" valign="top" style="width:41.45pt;border:solid windowtext 1.0pt;
@@ -103,36 +98,6 @@ We use the same metric set that has been consistently presented and compared bef
   <p class="MsoNormal" align="center" style="text-align:center"><span lang="EN-US">ACC-2</span></p>
   </td>
   <td width="55" valign="top" style="width:41.5pt;border-top:none;border-left:none;
-  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
-  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
-  <p class="MsoNormal" align="center" style="text-align:center"><span lang="EN-US">F1</span></p>
-  </td>
-     <td width="55" valign="top" style="width:41.5pt;border-top:none;border-left:none;
-  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
-  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
-  <p class="MsoNormal" align="center" style="text-align:center"><span lang="EN-US">MAE</span></p>
-  </td>
-     <td width="55" valign="top" style="width:41.5pt;border-top:none;border-left:none;
-  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
-  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
-  <p class="MsoNormal" align="center" style="text-align:center"><span lang="EN-US">Corr</span></p>
-  </td>
-     <td width="55" valign="top" style="width:41.5pt;border-top:none;border-left:none;
-  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
-  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
-  <p class="MsoNormal" align="center" style="text-align:center"><span lang="EN-US">Acc-2</span></p>
-  </td>
-     <td width="55" valign="top" style="width:41.5pt;border-top:none;border-left:none;
-  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
-  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
-  <p class="MsoNormal" align="center" style="text-align:center"><span lang="EN-US">Acc-5</span></p>
-  </td>
-     <td width="55" valign="top" style="width:41.5pt;border-top:none;border-left:none;
   border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
   mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
   mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
@@ -199,36 +164,6 @@ We use the same metric set that has been consistently presented and compared bef
   mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
   <p class="MsoNormal" align="center" style="text-align:center"><span lang="EN-US">86.01</span></p>
   </td>
-     <td width="55" valign="top" style="width:41.5pt;border-top:none;border-left:none;
-  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
-  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
-  <p class="MsoNormal" align="center" style="text-align:center"><span lang="EN-US">0.380</span></p>
-  </td>
-     <td width="55" valign="top" style="width:41.5pt;border-top:none;border-left:none;
-  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
-  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
-  <p class="MsoNormal" align="center" style="text-align:center"><span lang="EN-US">0.686</span></p>
-  </td>
-     <td width="55" valign="top" style="width:41.5pt;border-top:none;border-left:none;
-  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
-  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
-  <p class="MsoNormal" align="center" style="text-align:center"><span lang="EN-US">83.68</span></p>
-  </td>
-     <td width="55" valign="top" style="width:41.5pt;border-top:none;border-left:none;
-  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
-  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
-  <p class="MsoNormal" align="center" style="text-align:center"><span lang="EN-US">46.26</span></p>
-  </td>
-     <td width="55" valign="top" style="width:41.5pt;border-top:none;border-left:none;
-  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
-  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
-  <p class="MsoNormal" align="center" style="text-align:center"><span lang="EN-US">84.98</span></p>
-  </td>
  </tr>
 </tbody></table>
 
@@ -280,11 +215,7 @@ git clone https://github.com/zbxshangqiu/CMCBEP-CL.git
     
     ├── MOSI    
     │   ├── mosi_data_noalign.pkl    
-    │   ├── MOSI-label
-
-    ├── CH-SIMS    
-    │   ├── ch-sims_data_noalign.pkl    
-    │   ├── CH-SIMS-label  
+    │   ├── MOSI-label 
  ```
  3.Train the model
   ```
@@ -294,4 +225,4 @@ python main.py
   
 ## Conclusion  
   
-This article proposes a cross modal complementary balanced multimodal sentiment analysis technique driven by contrastive learning. CMCBEP-CL consists of three main modules, namely the dominant mode supplement module, the balanced prediction result module, and the cross mode comparative analysis module. This model utilizes multimodal supplementation, enhancement, and fusion to enhance feature differences and correlations through cross modal contrastive learning, balancing the predictive results of each stage of multimodal sentiment analysis. Three well used datasets, CMU-MOSEI, CMU-MOSI, and CH-SIMS, were used to evaluate the proposed CMCBEP-CL. Many tests and ablation studies have demonstrated the effectiveness of this algorithm.
+This article proposes a cross modal complementary balanced multimodal sentiment analysis technique driven by contrastive learning. CMCBEP-CL consists of three main modules, namely the dominant mode supplement module, the balanced prediction result module, and the cross mode comparative analysis module. This model utilizes multimodal supplementation, enhancement, and fusion to enhance feature differences and correlations through cross modal contrastive learning, balancing the predictive results of each stage of multimodal sentiment analysis. Three well used datasets, CMU-MOSEI and CMU-MOSI, were used to evaluate the proposed CMCBEP-CL. Many tests and ablation studies have demonstrated the effectiveness of this algorithm.
